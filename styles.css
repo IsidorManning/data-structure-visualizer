@@ -1,0 +1,317 @@
+/* Scroll bar styling */
+
+::-webkit-scrollbar {
+  width: 10px;
+  height: 15px;
+  border-top-left-radius: 0px;
+  border-top-right-radius: 0px;
+}
+
+::-webkit-scrollbar-track {
+  background: #d24b34e1;
+}
+
+::-webkit-scrollbar-thumb {
+  border-radius: 50px;
+  background: #f0f0f0;
+  transition: all 0.22s ease-out;
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background: #e4e4e4;
+}
+
+::-webkit-scrollbar-thumb:active {
+  background: #e14b32;
+}
+
+/* General */
+
+.orange {
+  background-color: #e14b32;
+}
+
+.blue {
+  background-color: #2d85c5;
+}
+
+.lighter-blue {
+  background-color: #3ca9ee;
+}
+
+.font {
+  font-family: 'Roboto', sans-serif;
+  color: white;
+  font-weight: 400;
+}
+
+.main-body {
+  height: 100vh;
+  width: 100vw;
+  position: absolute;
+  top: 0;
+  left: 0;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+.main-button {
+  position: fixed;
+  right: 25px;
+  top: 25px;
+  border-radius: 4px;
+  padding: 18px;
+  transition: 0.22s ease-out !important;
+}
+
+.main-button:hover {
+  font-size: 101%;
+}
+
+.header{
+  font-size: 75px;
+  font-weight: 400;
+  box-shadow: 8px 3px 8px #00000010;
+  padding: 20px;
+  border-radius: 10px;
+  opacity: 1;
+  transition: 5s;
+}
+
+input:hover, button:hover {
+  filter: brightness(93%);
+  margin-left: 10px;
+}
+
+input:focus, button:focus {
+  filter: brightness(105%);
+  padding: 16px;
+}
+
+.description {
+  font-size: 12px;
+  padding: 0px;
+  font-family: 'Roboto', sans-serif;
+  color: white;
+}
+
+/* Starting page */
+
+.prompt-body{
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: space-around;
+  width: 300px;
+  transition: all 0.25s ease-out;
+}
+
+.prompt {
+  font-size: 18px;
+  text-align: center;
+}
+.input {
+  margin-top: 20px;
+  margin-bottom: 10px;
+  width: 300px;
+  height: 30px;
+  padding: 10px;
+  border: none;
+  border-radius: 6px;
+  box-shadow: 5px 7px 20px rgba(0, 0, 0, 0.1);
+  color: black !important;
+}
+
+/* Choosing data structures page */
+
+.datastructures-div {
+  width: 300px;
+  background-color: white;
+  min-height: 200px;
+  display: flex;
+  flex-direction: column;
+  padding: 5px;
+  border: none;
+  border-radius: 6px;
+  box-shadow: 5px 4px 20px rgba(0, 0, 0, 0.1);
+  margin-top: 20px;
+}
+
+.ds-button {
+  height: 80px;
+  border: #442a2a25;
+  color: black !important;
+  font-size: 14px;
+  font-family: 'Roboto', sans-serif;
+}
+
+.input, .datastructures-div, button {
+  transition: all 0.28s ease-out;
+}
+
+button {
+  border:#442a2a25;
+  color: black !important;
+  font-size: 14px;
+  font-family: 'Roboto', sans-serif;
+}
+
+button:active {
+  font-size: 120%;
+}
+
+/* Data structure visualization page - General */
+
+.datastructure-header {
+  font-weight: 400;
+  font-size: 28px;
+}
+
+.datastructure-outer-container {
+  display: flex;
+  flex-direction: column;
+  transition: 0.2s ease-out;
+}
+
+.circle {
+  margin: 3px;
+  min-width: 50px;
+  min-height: 50px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  border-radius: 100%;
+  font-size: 20px;
+}
+
+.sentinel {
+  font-size: 11px;
+  width: 100px;
+  height: 100px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  border-radius: 4%;
+  padding-left: 25px;
+  padding-right: 25px;
+}
+
+.arrow-div {
+  display: flex;
+  flex-direction: row;
+  height: 40px;
+  align-items: center;
+  justify-content: center;
+  margin-left: 5px;
+  margin-right: 5px;
+}
+
+.arrow-stick {
+  width: 20px;
+  height: 3px;
+  border-top-left-radius: 2.5px;
+  border-bottom-left-radius: 2.5px;
+  background-color: white;
+  float: left;
+}
+
+.arrow-head {
+  border-radius: 5px;
+  border-top: 5px solid transparent;
+  border-left: 10px solid white;
+  border-bottom: 5px solid transparent;
+}
+
+.linked-list, .queue, .binary-tree {
+  width: 90%;
+  display: flex;
+  overflow-x: auto;
+  white-space: nowrap;
+}
+
+.linked-list:hover, .queue:hover, 
+.binary-tree:hover {
+  cursor: pointer;
+}
+
+.linked-list:active, .queue:active, 
+.binary-tree:active {
+  cursor: default;
+  filter: brightness(0.9);
+}
+
+/* Data structure visualization page - Linked list */
+
+.linked-list {
+  flex-direction: row;
+  align-items: center;
+  height: 150px;
+}
+
+/* Data structure visualization page - Binary tree */
+
+.binary-tree {
+  overflow-y: auto;
+  flex-direction: column;
+  align-items: center;
+  height: 500px;
+}
+
+.binary-tree-row {
+  margin: auto;
+  width: auto;
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: space-around;
+}
+
+/* Data structure visualization page - Queue */
+
+.queue {
+  overflow-y: auto;
+  align-items: center;
+  flex-direction: row;
+  width: 60% !important;
+  overflow-y: scroll;
+  min-height: 200px;
+}
+
+.queue-column-left-side, .queue-column-middle, 
+.queue-column-right-side {
+  margin: auto;
+  width: 33.33%;
+  display: flex;
+  align-items: center;
+}
+
+.queue-column-left-side {
+  height: auto;
+  flex-direction: column;
+}
+
+.queue-column-middle {
+  flex-direction: column-reverse;
+  justify-content: space-between;
+}
+
+.queue-column-right-side {
+  flex-direction: column-reverse;
+  justify-content: space-around;
+}
+
+.queue-arrows {
+  width: 80px;
+  filter: invert(1);
+  margin-bottom: 5px;
+}
+
+.queue-description {
+  width: 80vw;
+  text-align: center;
+  font-size: 20px;
+}

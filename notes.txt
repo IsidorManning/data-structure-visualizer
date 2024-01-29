@@ -1,0 +1,11 @@
+RELAVANT EMSCRIPTEN SCRIPTS FOR COMPILING:
+emcc ./linked_list_source/linked_list_proxy.cpp -o ./linked_list_source/linked_list_wasm.js -s LINKABLE=1 -s EXPORT_ALL=1
+emcc ./queue_source/queue_proxy.cpp -o ./queue_source/queue_wasm.js -s LINKABLE=1 -s EXPORT_ALL=1
+emcc ./binary_tree_source/binary_tree_proxy.cpp -o ./binary_tree_source/binary_tree_wasm.js -s LINKABLE=1 -s EXPORT_ALL=1 --bind 
+
+IMPORTANT! Don't forget to default export the 'Module' object at the end of the generated js glue code:
+  export default Module;
+
+TOTAL LINES OF CODE (excluding any generated wasm code)
+- 2024-01-22: 1252 (without documentation) 
+- 2024-01-28: 1757 (with documentation) 
