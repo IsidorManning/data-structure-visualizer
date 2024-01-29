@@ -4,9 +4,8 @@ An app used by a user to visualize certain data structures with their own intege
 # The purpose of this project was to achieve two main goals
 
 Create a data structure visualizer app that a user can use to get a visual intuition for three introductory data structures: the linked list, the binary tree, and the queue. It works by having a user input some integer data and then choosing the data structure they wish to visualize with their data.
-Fill the gap between C++ and JavaScript using WebAssembly (WASM). The implementations for the data structures themselves are written in C++. We use Emscripten to compile the C++ source code for WASM so that we can use the C++ data structures in JavaScript. This was the real challenge since it involved messing around with many proxies. 
 
-Regarding having the data structure implementation written in pure C++, I could have avoided a lot of pain by implementing them in JavaScript. However, the goal was not only to make the visualizer app work but also to familiarize myself with WASM. This is why I restricted myself from writing the code for all of the data structures in C++. 
+Bridge the gap between C++ and JavaScript using WebAssembly (WASM). The implementations for the data structures themselves are written in C++. We use Emscripten to compile the C++ source code for WASM so that we can use the C++ data structures in JavaScript. This was the real challenge since it involved messing around with many proxies. 
 
 # Details on how we visualize our three data structures
 
@@ -39,6 +38,8 @@ We have some asynchronous functions just for the sake of visual pleasure. The �
 I use modular programming in this project since I believe it is a good practice. I try to encapsulate every single functionality in its class and in its own appropriate module. This is why we have a lot of different source files. However, I find that this helps with keeping the project well organized. Subsequently, this style of programming also makes it much easier and more convenient to expand this project if I want to add more functionality or data structures in the future. 
 
 # Additional notes
+
+Regarding having the data structure implementation written in pure C++, I could have avoided a lot of pain by implementing them in JavaScript. However, the goal was not only to make the visualizer app work but also to familiarize myself with WASM. This is why I restricted myself from writing the code for all of the data structures in C++. 
 
 The files “linked_list_wasm.js”, “binary_tree_wasm.js”, and “queue_wasm.js” are glue codes that Emscripten generates when compiling to WASM. This is not the code I have written. All I have done in these files was to add an export statement at the end of the files which default exports the ‘Module’ object. We use this object in JavaScript to access our C++ functions that have been allocated on the Emscripten Heap. 
 
