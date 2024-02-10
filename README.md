@@ -1,4 +1,7 @@
 # data-structure-visualizer
+
+The data structure visualizer can be found on my [website](https://isidormanning.com/projects/dsvisualize/).
+
 An app used by a user to visualize certain data structures with their own integer data.
 
 # The purpose of this project was to achieve two main goals
