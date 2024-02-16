@@ -59,10 +59,11 @@
 
 .main-button {
   position: fixed;
-  right: 25px;
-  top: 25px;
+  right: 18px;
+  bottom: 18px;
   border-radius: 4px;
-  padding: 18px;
+  padding: 12px;
+  font-size: 11.5px;
   transition: 0.22s ease-out !important;
 }
 
@@ -71,7 +72,7 @@
 }
 
 .header{
-  font-size: 75px;
+  font-size: 65px;
   font-weight: 400;
   box-shadow: 8px 3px 8px #00000010;
   padding: 20px;
