@@ -95,7 +95,7 @@ class Window {
     // Here we manipulate the input prompt since it now will be used
     // to tell the user to chose between the different data structure options
     const inputPrompt = document.getElementById("input-prompt");
-    const promptString = "Please Chose One of the Following Data Structures that You Would Like To Visualize.";
+    const promptString = "Please choose one of the following data structures that you would like to visualize.";
     inputPrompt.innerHTML = promptString;
 
     const optionsContainer = this.elementCreator.standardDiv("datastructures-div");
